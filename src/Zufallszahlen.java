@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class Zufallszahlen {
-	static int[] deck = new int[52];
+	static int[] deck = new int[52]; //Hallo Max!
 
 	private static void fillDeck() {
 		for (int i = 0; i < 52; i++) {
@@ -184,6 +184,7 @@ public class Zufallszahlen {
 		for (int i = 1; i <= 1000000; i++) {
 			 fillDeck();
 			 int[] hand = drawHand(deck);
+//			 int[] hand = {9,10,11,12,8};
 			if (checkPair(hand) == 1) {
 				pairCounter++;
 			}
@@ -221,7 +222,7 @@ public class Zufallszahlen {
 		System.out.println("Flush:         " + flushCounter);
 		System.out.println("Straight:      " + straightCounter);
 		System.out.println("StraightFlush: " + straightFlushCounter);
-		System.out.println("RoyalFlush:    " + royalFlushCounter);
+		System.out.println("RoyalFlush:    " + (int) (royalFlushCounter / 100));
 	}
 
 	public static void main(String[] args) {
